@@ -1,7 +1,7 @@
 name: yelp_graphql
-description: A new Flutter package project.
+description: A Flutter client for the Yelp GraphQL API.
 version: 0.0.1
-homepage:
+homepage: https://github.com/jushutch/yelp_graphql
 
 environment:
   sdk: ">=2.16.2 <3.0.0"
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  http: ^0.13.4
 
 dev_dependencies:
   flutter_test:
