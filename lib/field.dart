@@ -11,7 +11,7 @@ class Field {
   }
 }
 
-class Total extends Field with SearchField {
+class Total extends Field with SearchField, BusinessMatchField {
   Total() : super("total");
 }
 
@@ -29,6 +29,10 @@ class Price extends Field with BusinessField {
 
 class Distance extends Field with BusinessField {
   Distance() : super("distance");
+}
+
+class Url extends Field with BusinessField {
+  Url() : super("url");
 }
 
 class Photos extends Field with BusinessField {

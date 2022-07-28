@@ -13,7 +13,7 @@ class ParentField extends Field {
   }
 }
 
-class Business extends ParentField with SearchField {
+class Business extends ParentField with SearchField, BusinessMatchField {
   Business(List<BusinessField> fields)
       : super(
           "business",

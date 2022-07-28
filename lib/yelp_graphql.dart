@@ -1,6 +1,4 @@
 import 'dart:convert';
-
-import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart';
 import 'package:yelp_graphql/query.dart';
 export 'package:yelp_graphql/query.dart';
@@ -41,7 +39,8 @@ class YelpGraphQL {
     Map<String, dynamic> body =
         json.decode(yelpResponse.body) as Map<String, dynamic>;
     if (body.containsKey("errors")) {
-      throw Exception("There was an error in the query response.");
+      throw Exception(
+          "There was an error in the query response: ${body["errors"]}");
     }
     if (!body.containsKey("data")) {
       throw Exception("Yelp GraphQL response did not include data.");

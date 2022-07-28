@@ -1,9 +1,19 @@
-class Attributes {
-  static const String hotAndNew = "hot_and_new";
-  static const String requestAQuote = "request_a_quote";
-  static const String waitlistReservation = "waitlist_reservation";
-  static const String deals = "deals";
-  static const String genderNeutralRestrooms = "gender_neutral_restrooms";
-  static const String openToAll = "open_to_all";
-  static const String wheelchairAccessible = "wheelchair_accessible";
+enum Attribute {
+  hotAndNew,
+  requestAQuote,
+  waitlistReservation,
+  deals,
+  genderNeutralRestrooms,
+  openToAll,
+  wheelchairAccessible,
 }
+
+const attributes = <Attribute, String>{
+  Attribute.hotAndNew: "hot_and_new",
+  Attribute.requestAQuote: "request_a_quote",
+  Attribute.waitlistReservation: "waitlist_reservation",
+  Attribute.deals: "deals",
+  Attribute.genderNeutralRestrooms: "gender_neutral_restrooms",
+  Attribute.openToAll: "open_to_all",
+  Attribute.wheelchairAccessible: "wheelchair_accessible",
+};
