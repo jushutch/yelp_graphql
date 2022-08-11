@@ -8,7 +8,7 @@ class YelpHours {
             .toList(),
         isOpenNow = data["is_open_now"] as bool;
 
-  final String hoursType;
-  final List<YelpOpenHours> openHours;
-  final bool isOpenNow;
+  final String? hoursType;
+  final List<YelpOpenHours>? openHours;
+  final bool? isOpenNow;
 }

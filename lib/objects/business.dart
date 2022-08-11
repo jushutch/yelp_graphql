@@ -15,25 +15,28 @@ class YelpBusiness {
         rating = data["rating"] as double,
         price = data["price"] as String,
         distance = data["distance"] as double,
-        location =
-            YelpLocation.fromMap(data["location"] as Map<String, dynamic>),
+        location = data.containsKey("location")
+            ? YelpLocation.fromMap(data["location"] as Map<String, dynamic>)
+            : null,
         photos = <String>[...?data["photos"]],
-        hours = YelpHours.fromMap(
-            (data["hours"] as List<dynamic>)[0] as Map<String, dynamic>);
+        hours = data.containsKey("location")
+            ? YelpHours.fromMap(
+                (data["hours"] as List<dynamic>)[0] as Map<String, dynamic>)
+            : null;
 
-  final String name;
-  final String id;
-  final String alias;
-  final bool isClaimed;
-  final bool isClosed;
-  final String url;
-  final String phone;
-  final String displayPhone;
-  final int reviewCount;
-  final double rating;
-  final String price;
-  final double distance;
-  final YelpLocation location;
-  final List<String> photos;
-  final YelpHours hours;
+  final String? name;
+  final String? id;
+  final String? alias;
+  final bool? isClaimed;
+  final bool? isClosed;
+  final String? url;
+  final String? phone;
+  final String? displayPhone;
+  final int? reviewCount;
+  final double? rating;
+  final String? price;
+  final double? distance;
+  final YelpLocation? location;
+  final List<String>? photos;
+  final YelpHours? hours;
 }

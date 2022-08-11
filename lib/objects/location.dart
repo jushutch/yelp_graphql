@@ -9,12 +9,12 @@ class YelpLocation {
         country = data["country"] as String,
         formattedAddress = data["formatted_address"] as String;
 
-  final String address1;
-  final String address2;
-  final String address3;
-  final String city;
-  final String state;
-  final String postalCode;
-  final String country;
-  final String formattedAddress;
+  final String? address1;
+  final String? address2;
+  final String? address3;
+  final String? city;
+  final String? state;
+  final String? postalCode;
+  final String? country;
+  final String? formattedAddress;
 }

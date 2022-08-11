@@ -5,8 +5,8 @@ class YelpOpenHours {
         start = data["start"] as String,
         day = data["day"] as int;
 
-  final bool isOvernight;
-  final String end;
-  final String start;
-  final int day;
+  final bool? isOvernight;
+  final String? end;
+  final String? start;
+  final int? day;
 }
