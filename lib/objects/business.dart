@@ -19,7 +19,7 @@ class YelpBusiness {
             ? YelpLocation.fromMap(data["location"] as Map<String, dynamic>)
             : null,
         photos = <String>[...?data["photos"]],
-        hours = data.containsKey("location")
+        hours = data.containsKey("hours")
             ? YelpHours.fromMap(
                 (data["hours"] as List<dynamic>)[0] as Map<String, dynamic>)
             : null;
